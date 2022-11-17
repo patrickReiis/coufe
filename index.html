@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel = "icon" href ="images/logo.png" type = "image/x-icon">
+    <title>Coufé</title>
+</head>
+<body>
+    <header>
+        <h1 class="title-header">Coufé</h1>
+    </header>
+    <main>
+        <section>
+            <h2 class="title-description">The best cafeteria suited for lonely people</h2>
+            <img  style="width: 55%;" src="images/front cafeteria.jpg" alt="picture of the front of the cafeteria">
+        </section>
+        
+        <article class="menu-all">
+            <div class="horizontal-line"></div>
+            <h2 class="sub-title-basis">Menu</h2>
+            <div class="all-cards">
+                <div>
+                    <img src="images/brownie.jpg" alt="picture of a brownie">
+                    <p>The best Brownies of the region made with 50% milk chocolate and 50% cacao. Imported directly from China!</p>
+                    <p>$4 per unit</p>
+                </div>
+                <div> 
+                    <img src="images/coffee.jpeg" alt="picture of a brownie">
+                    <p>As expected from a cafeteria we have coffee. But not just one type, we have more than 5 different types of coffee!</p>
+                    <p>$2.70 per unit</p>
+                </div>
+                <div>
+                    <img src="images/pao de queijo.jpg" alt="picture of a brownie">
+                    <p>Traditional <strong>brazilian Cheese Puffs</strong>, some people say you can smell it's taste from far away! </p>
+                    <p>$1 per unit</p>
+                </div>
+                <div>
+                    <img src="images/chás diversos.webp" alt="picture of a brownie">
+                    <p>As we have a variety of coffee we also have a variety of teas ready for you! Some common teas we have include: <strong>Green Tea, Oolong Tea, Black Tea</strong>...</p>
+                    <p>$2 per unit</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <h2 class="sub-title-basis">Where to find us</h2>
+            <div class="container-contact">
+                    <div class="location">
+                        <address>
+                            <h2>Coufé</h2>
+                            <p> 1, S Usman Road<br> 
+                                T. Nagar<br> 
+                                Chennai <br>
+                                Tamil Nadu 600017<br>
+                                India
+                            </p> 
+                            <h2>Contact</h2>
+                            <ul>
+                                <li>Tel: +55 54 6666-6666</li>
+                                <li>Email: patrickpereirareal1@gmail.com</li>
+                            </ul>
+                        </address>
+                        <div id="map" style="justify-self: end;"></div>
+                    </div>    
+            </div>
+            
+        </article>
+    </main>
+
+    <script>
+        // Initialize and add the map
+function initMap() {
+  // The location of indianCoffee
+  const indianCoffee = { lat:13.033365, lng:80.2280115 };
+  
+  // The map, centered at indianCoffee
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: indianCoffee,
+  });
+  // The marker, positioned at indianCoffee
+  const marker = new google.maps.Marker({
+    position: indianCoffee,
+    map: map,
+  });
+}
+
+window.initMap = initMap;
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>       
+
+    </body>
+</html>
